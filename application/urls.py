@@ -1,6 +1,6 @@
-from collections import UserList
 from django.urls import path
 from .views import bookListCreate, bookRetrieveUpdateDelete, usersListCreate,userRetrieveUpdateDelete,ordersListCreate,orderRetrieveUpdateDelete
+from application import views
 # from rest_framework.routers import DefaultRouter
 
 # #created Router 
