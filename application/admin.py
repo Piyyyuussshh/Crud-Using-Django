@@ -4,7 +4,7 @@ from .models import Users,Books,Orders
 # Register your models here.
 @admin.register(Users)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['first_name','last_name','email']
+    list_display = ['id','first_name','last_name','email']
 
 @admin.register(Books)
 class BookAdmin(admin.ModelAdmin):

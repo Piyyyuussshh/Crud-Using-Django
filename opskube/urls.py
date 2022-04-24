@@ -22,5 +22,5 @@ from application import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.project_view),
-    path('',include('application.urls'))
+    path('api/v1/app/',include('application.urls'))
 ]
