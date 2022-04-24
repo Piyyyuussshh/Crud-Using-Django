@@ -14,6 +14,8 @@ from application import serializers
 def hello_world(request):
     return Response({'msg':"hello world"},status=status.HTTP_200_OK)
 
+#API FOR USERS MODEL
+
 class usersListCreate(GenericAPIView,ListModelMixin,CreateModelMixin):
     queryset = Users.objects.all()
     serializer_class = UserSerializer
@@ -36,6 +38,7 @@ class userRetrieveUpdateDelete(GenericAPIView,RetrieveModelMixin,UpdateModelMixi
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
 
+#API FOR BOOK MODEL
 
 class bookListCreate(GenericAPIView,ListModelMixin,CreateModelMixin):
     queryset = Books.objects.all()
@@ -59,6 +62,9 @@ class bookRetrieveUpdateDelete(GenericAPIView,RetrieveModelMixin,UpdateModelMixi
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
 
+
+
+# API FOR ORDER MODELS
 
 class ordersListCreate(GenericAPIView,ListModelMixin,CreateModelMixin):
     queryset = Orders.objects.all()
